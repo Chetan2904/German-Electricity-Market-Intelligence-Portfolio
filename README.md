@@ -1,147 +1,221 @@
-# German Electricity Market Intelligence
+German Electricity Market Intelligence
 
-### Interactive Energy Market Analytics | Germany (DE-LU) | 2018–2026
+Interactive Energy Market Analytics | Germany (DE-LU) | 2018–2026
 
-**Python · Pandas · NumPy · Plotly · Statsmodels · Streamlit**
+Python · Pandas · NumPy · Plotly · Statsmodels · Streamlit
 
-An interactive portfolio demonstrating electricity-market analysis,
-energy-transition indicators, data visualization, and econometric modelling.
+An interactive analytical portfolio demonstrating Python-based electricity-market analysis, energy-transition indicators, data visualization, and econometric modelling.
 
-**Developed by:** Chetan Masram
+The project illustrates how quantitative analysis and interactive dashboards can support energy-market monitoring, commercial analysis, and market intelligence.
 
-**Live dashboard:** https://german-electricity-market-intelligence-b6drwomgtytftpkg5o7jv.streamlit.app/
+Developed by: Chetan Masram
 
-> **SYNTHETIC DATA DEMONSTRATION**
->
-> All market observations displayed in this public dashboard are
-> artificially generated. They do not represent actual German
-> electricity-market conditions. Numerical results must not be
-> interpreted as empirical findings about Germany.
+Live Dashboard: https://german-energy-market-portfolio.streamlit.app/
 
----
+⸻
 
-## 1. Project Overview
+IMPORTANT: SYNTHETIC DATA DEMONSTRATION
 
-This project demonstrates an interactive analytical framework for
-exploring electricity-market indicators.
+All market observations displayed in this public dashboard are artificially generated.
 
-The dashboard focuses on three areas:
+They do not represent actual German electricity-market conditions. Numerical results, statistical relationships, and visualizations must not be interpreted as empirical findings about Germany.
 
-- **Wholesale electricity markets:** Illustrative electricity,
-  natural gas, and carbon-price relationships.
-- **Energy transition:** Wind, solar, and conventional generation.
-- **Econometric analysis:** Statistical relationships estimated
-  using multivariate regression.
+The public application demonstrates analytical techniques and software implementation, not historical market performance.
 
-The application is a technical portfolio demonstration, not an
-official source of German energy-market statistics.
+⸻
 
-## 2. Dashboard Features
+1. Project Overview
 
-### Market Overview
+Germany’s electricity market provides an important setting for examining wholesale electricity prices, energy commodity prices, electricity demand, and the transition toward renewable generation.
 
-- Monthly electricity-price visualizations
-- Electricity and natural gas price comparisons
-- Interactive date-range selection
-- Summary market indicators
+This project demonstrates an interactive analytical framework organized around three areas:
 
-### Energy Transition
+Wholesale Electricity Markets
 
-- Wind and solar generation trends
-- Gas, lignite, and hard-coal generation
-- Wind-and-solar generation relative to grid load
+Exploring illustrative relationships between electricity prices, natural gas prices, and carbon prices.
 
-The wind-and-solar-to-load indicator is not Germany's official
-renewable-electricity share.
+Energy Transition
 
-### Econometrics
+Visualizing wind, solar, and conventional electricity generation alongside grid-load indicators.
 
-- Correlation heatmap
-- Multivariate ordinary least squares regression
-- HAC-robust standard errors
-- Coefficient estimates and p-values
-- Confidence intervals
-- Date-range-sensitive estimation
+Econometric Analysis
 
-Regression results describe associations within synthetic data.
-They are not causal estimates.
+Demonstrating multivariate regression techniques and statistical interpretation using synthetic monthly observations.
 
-### Methodology
+The application is a technical portfolio demonstration rather than an official source of German energy-market statistics.
 
-The dashboard documents analytical assumptions, data limitations,
-and interpretation safeguards.
+⸻
 
-## 3. Technology Stack
+2. Analytical Objectives
 
-| Component | Technology |
-|---|---|
-| Programming | Python |
-| Data processing | Pandas, NumPy |
-| Visualization | Plotly |
-| Econometrics | Statsmodels |
-| Web application | Streamlit |
-| Development | JupyterLab |
+The project demonstrates how an energy-market analyst can approach three analytical questions:
 
-## 4. Run Locally
+1. How can electricity prices be examined alongside natural gas and carbon prices?
+2. How can renewable and conventional generation indicators be visualized to support electricity-market analysis?
+3. How can econometric methods be used to investigate statistical associations between market variables?
 
-Clone or download the release repository.
+These questions guide the demonstration. The synthetic dataset cannot provide empirical answers about Germany’s historical electricity market.
 
-Install dependencies:
+⸻
 
-    python -m pip install -r requirements.txt
+3. Interactive Dashboard
 
-Launch the application from the repository root:
+The application contains four sections.
 
-    python -m streamlit run PUBLIC_DEMO/dashboard/demo_app.py
+Market Overview
 
-The dashboard reads:
+* Monthly electricity-price visualizations
+* Electricity and natural gas price comparisons
+* Interactive date-range selection
+* Summary market indicators
 
-    PUBLIC_DEMO/german_energy_market_eex_2018_2026.csv
+Energy Transition
 
-## 5. Data and Research Integrity
+* Wind and solar generation trends
+* Natural gas, lignite, and hard-coal generation
+* Wind-and-solar generation relative to grid load
 
-### Public demonstration
+Indicator clarification: The wind-and-solar-to-load ratio is not Germany’s official renewable-electricity share.
 
-The public application uses 96 synthetic monthly observations
-covering November 2018 through October 2026.
+Econometrics
 
-The dataset is intended exclusively to demonstrate analytical
-workflows, visualization, and software implementation.
+* Correlation heatmap
+* Multivariate ordinary least squares regression
+* HAC-robust standard errors
+* Regression coefficients and p-values
+* Confidence intervals
+* Date-range-sensitive estimation
 
-### Separate empirical research
+Regression results describe statistical associations within synthetic data. They are not causal estimates.
 
-A separate private research workflow examines historical German
-electricity-market data and related energy indicators.
+Methodology
 
-The public synthetic dashboard does not reproduce the empirical
-estimates or underlying datasets from that research.
+Documentation of analytical assumptions, indicator definitions, data limitations, and interpretation safeguards.
 
-Real-data outputs will be shared only after relevant publication
-and data-use permissions have been verified.
+Explore the dashboard: https://german-energy-market-portfolio.streamlit.app/
 
-## 6. Analytical Limitations
+⸻
 
-- Synthetic observations do not establish historical facts.
-- Correlation does not imply causation.
-- Regression estimates depend on model specification.
-- Time-series dependence and nonstationarity require attention.
-- Short sample periods may produce unstable estimates.
-- Illustrative indicators are not official statistics.
+4. Technology Stack
 
-## 7. Portfolio Relevance
+Component	Technology	Application
+Programming	Python	Analytical workflow
+Data processing	Pandas, NumPy	Data preparation and numerical operations
+Visualization	Plotly	Interactive charts
+Econometrics	Statsmodels	Regression analysis and statistical inference
+Web application	Streamlit	Interactive dashboard
+Development	JupyterLab	Analytical development
 
-This project demonstrates practical skills relevant to energy-market
-analyst, commercial analyst, and market-intelligence positions:
+⸻
 
-- Time-series data preparation and validation
-- Interactive dashboard development
-- Electricity-market indicator analysis
-- Econometric modelling
-- Statistical interpretation
-- Research transparency and reproducibility
+5. Run Locally
 
----
+Clone or download this repository and open its root directory.
 
-**Author:** Chetan Masram
+Install dependencies
 
-**Project:** German Electricity Market Intelligence
+python -m pip install -r requirements.txt
+
+Launch the application
+
+python -m streamlit run PUBLIC_DEMO/dashboard/demo_app.py
+
+The application reads the synthetic dataset:
+
+PUBLIC_DEMO/german_energy_market_eex_2018_2026.csv
+
+No private empirical datasets are required to run the public demonstration.
+
+⸻
+
+6. Data and Research Integrity
+
+Public Demonstration Dataset
+
+The public application uses 96 synthetic monthly observations, covering November 2018 through October 2026.
+
+The observations are artificially generated and intended exclusively to demonstrate:
+
+* Time-series data processing
+* Interactive data visualization
+* Statistical modelling
+* Analytical interpretation
+* Dashboard implementation
+
+The dataset does not reproduce historical German electricity-market conditions.
+
+Separate Empirical Research
+
+A separate private research workflow examines historical German electricity-market data and related energy indicators.
+
+The public synthetic dashboard does not reproduce the empirical estimates or underlying datasets from that research.
+
+The empirical research is being developed separately, with attention to data quality, econometric validity, reproducibility, and publication rights.
+
+Real-data outputs will be shared only after the relevant data-use and publication permissions have been verified.
+
+⸻
+
+7. Analytical Limitations
+
+The following limitations are important when interpreting the dashboard:
+
+* Synthetic observations cannot establish historical market facts.
+* Correlation does not imply causation.
+* Regression estimates depend on model specification and variable selection.
+* HAC-robust standard errors do not eliminate endogeneity or other modelling concerns.
+* Time-series dependence, nonstationarity, and structural changes require investigation in empirical research.
+* Short sample periods may produce unstable regression estimates.
+* The application does not provide validated electricity-price forecasts.
+* Illustrative indicators are not official German energy statistics.
+
+⸻
+
+8. Professional Relevance
+
+This portfolio demonstrates analytical and technical skills relevant to positions in:
+
+Energy Market Analysis · Market Intelligence · Commercial Analysis · Pricing Analysis · Energy Strategy
+
+Demonstrated Skills
+
+* Python-based analytical workflows
+* Time-series data preparation and validation
+* Interactive dashboard development
+* Electricity-market indicator analysis
+* Multivariate econometric modelling
+* Statistical interpretation
+* Documentation and reproducibility
+* Communication of analytical limitations
+
+The project combines quantitative analysis with an applied electricity-market context.
+
+⸻
+
+9. Future Research Development
+
+A separate empirical research project is being developed to investigate relationships between German wholesale electricity prices, natural gas prices, carbon prices, and residual electricity demand.
+
+Potential research extensions include:
+
+* Literature-based hypothesis development
+* Alternative econometric specifications
+* Structural-break analysis
+* Robustness and sensitivity testing
+* Out-of-sample model evaluation
+* Investigation of electricity-market relationships during the European energy crisis
+
+These are planned research activities, not completed empirical findings.
+
+⸻
+
+Author
+
+Chetan Masram
+
+MSc Environmental Economics and Management
+The Hebrew University of Jerusalem
+
+Project: German Electricity Market Intelligence
+
+Live Dashboard: https://german-energy-market-portfolio.streamlit.app/
