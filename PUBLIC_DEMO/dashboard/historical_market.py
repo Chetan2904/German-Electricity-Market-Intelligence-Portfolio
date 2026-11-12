@@ -16,6 +16,21 @@ def load_historical_data():
 
 def render_historical_market():
 
+
+    # Download public synthetic demonstration data
+    st.download_button(
+        label="Download Synthetic Demonstration Data (CSV)",
+        data=DATA_PATH.read_bytes() if DATA_PATH.is_file() else b"",
+        file_name="german_energy_market_SYNTHETIC_DEMO.csv",
+        mime="text/csv",
+        help=(
+            "Synthetic demonstration observations only. "
+            "Not actual German electricity-market data."
+        ),
+        key="synthetic_data_download",
+        disabled=not DATA_PATH.is_file()
+    )
+
     if not DATA_PATH.is_file():
         st.error(
             "Synthetic demonstration dataset is missing. "
@@ -66,10 +81,11 @@ def render_historical_market():
         st.warning("No data available for this period.")
         return
 
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📊 Market Overview",
         "🌱 Energy Transition",
         "📈 Econometrics",
+        "💼 Commercial Insights",
         "📚 Methodology"
     ])
 
@@ -456,7 +472,158 @@ def render_historical_market():
 
         # ========================================================
 
+
+    # ========================================================
+    # COMMERCIAL MARKET INTELLIGENCE
+    # ========================================================
+
     with tab4:
+
+        st.header("Commercial Market Intelligence")
+
+        st.info(
+            "Analyst perspective: The following sections describe "
+            "general commercial applications of electricity-market "
+            "analysis. They are not empirical conclusions from "
+            "the synthetic demonstration dataset."
+        )
+
+        st.markdown(
+            """
+            Energy-market intelligence connects market indicators
+            with commercial decisions.
+
+            For electricity suppliers, trading teams, procurement
+            departments and energy-intensive businesses, the
+            objective is to understand changing market conditions
+            and evaluate potential risks and opportunities.
+            """
+        )
+
+        # ----------------------------------------------------
+        # ELECTRICITY PRICING
+        # ----------------------------------------------------
+
+        st.subheader("1. Electricity Pricing")
+
+        st.markdown(
+            """
+            **Key indicators to monitor**
+
+            - Natural gas prices and generation fuel costs.
+            - EU ETS carbon allowance prices.
+            - Residual electricity demand.
+            - Renewable generation and weather conditions.
+            - Wholesale electricity-price volatility.
+
+            **Commercial application**
+
+            These indicators can help pricing teams interpret
+            market movements, construct scenarios and explain
+            changes in wholesale electricity costs.
+
+            They do not independently determine future prices.
+            """
+        )
+
+        # ----------------------------------------------------
+        # ENERGY PROCUREMENT
+        # ----------------------------------------------------
+
+        st.subheader("2. Energy Procurement")
+
+        st.markdown(
+            """
+            **Business question**
+
+            How should a company evaluate electricity-purchasing
+            decisions when fuel costs and market conditions change?
+
+            **Analytical approach**
+
+            - Monitor electricity forward and spot-market signals.
+            - Compare alternative procurement scenarios.
+            - Assess exposure to market-price fluctuations.
+            - Consider demand profiles and purchasing flexibility.
+            - Evaluate relevant contract and risk constraints.
+
+            **Commercial application**
+
+            Market analysis can support procurement discussions,
+            budget planning and risk evaluation.
+
+            Actual purchasing decisions require additional
+            information about contracts, risk tolerance and
+            company-specific electricity demand.
+            """
+        )
+
+        # ----------------------------------------------------
+        # MARKET RISK
+        # ----------------------------------------------------
+
+        st.subheader("3. Market Risk Monitoring")
+
+        st.markdown(
+            """
+            **Potential risk indicators**
+
+            - Rapid increases in natural gas prices.
+            - Changes in carbon allowance prices.
+            - High residual electricity demand.
+            - Low renewable generation.
+            - Increased electricity-price volatility.
+
+            **Analytical approach**
+
+            Combine market indicators into a structured
+            monitoring framework and assess potential
+            scenarios rather than relying on one variable.
+
+            **Commercial application**
+
+            This approach can help commercial and risk teams
+            identify developments that deserve closer
+            investigation.
+            """
+        )
+
+        # ----------------------------------------------------
+        # ANALYST RECOMMENDATIONS
+        # ----------------------------------------------------
+
+        st.subheader("4. Analyst Recommendations")
+
+        st.success(
+            "Recommended analytical workflow: Monitor electricity, "
+            "fuel, carbon and residual-demand indicators together; "
+            "investigate unusual movements; compare scenarios; "
+            "and communicate findings with clear assumptions "
+            "and limitations."
+        )
+
+        st.markdown(
+            """
+            **Next analytical developments**
+
+            1. Add electricity forward-price information where
+               suitable data access is available.
+            2. Develop scenario-based sensitivity analysis.
+            3. Evaluate out-of-sample forecasting performance.
+            4. Investigate changes in market relationships
+               across different energy-market regimes.
+
+            **Research integrity**
+
+            This public dashboard uses synthetic demonstration
+            observations. The commercial discussion is general
+            and must not be interpreted as investment, trading
+            or procurement advice.
+            """
+        )
+
+
+    with tab5:
         # METHODOLOGY AND RESEARCH LIMITATIONS
         # ========================================================
 
